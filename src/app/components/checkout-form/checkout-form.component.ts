@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout-form',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout-form.component.css']
 })
 export class CheckoutFormComponent implements OnInit {
-
-  constructor() { }
+  name:string 
+  address:string 
+  card:string 
+  constructor(private router:Router) { 
+    this.name = '';
+    this.address = '';
+    this.card = '';
+  }
 
   ngOnInit(): void {
+    
+  }
+
+  navigateRoute():void {
+    this.router.navigateByUrl('success')
   }
 
 }

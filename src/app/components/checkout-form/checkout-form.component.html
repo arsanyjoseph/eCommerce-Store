@@ -1,14 +1,14 @@
 <div class="checkoutFormContainer">
-    <form #checkout="ngForm" class="checkoutForm">
+    <form #checkout="ngForm" class="checkoutForm" (ngSubmit)="navigateRoute()" >
         <label>Full Name</label>
-        <input type="text" placeholder="Enter your Name" minlength="5" required />
+        <input type="text" placeholder="Enter your Name" minlength="5" name="name" required [(ngModel)]="name" />
 
         <label>Address</label>
-        <input type="text" placeholder="Enter your Address" minlength="5" required />
+        <input type="text" placeholder="Enter your Address" minlength="5" required name="address" [(ngModel)]="address" />
 
         <label>Card Number</label>
-        <input type="number" placeholder="Card Number" minlength="10" required />
+        <input type="number" placeholder="Card Number" minlength="10" required name="card" [(ngModel)]="card" />
 
-        <button type="submit" class="Btn checkoutBtn" routerLink="/success" [disabled]="checkout.invalid">Check Out</button>
+        <button type="submit" class="Btn checkoutBtn" [disabled]="checkout.invalid" >Check Out</button>
     </form>
 </div>

@@ -1,15 +1,9 @@
 export class Product {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    url: string;
-
-    constructor(){
-        this.id= 0;
-        this.name = '';
-        this.price = 0;
-        this.url = '';
-        this.description= '';
+    constructor(public id: number,
+        public name: string,
+        public description: string,
+        public price: number,
+        public url: string,
+        public amount?:number,){
     }
 }

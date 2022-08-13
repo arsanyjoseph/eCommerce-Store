@@ -1,11 +1,10 @@
 <div class="checkoutContainer">
     <div class="cartDetails">
-        <app-cart-item></app-cart-item>
-        <app-cart-item></app-cart-item>
-        <app-cart-item></app-cart-item>
+        <h2 *ngIf="cartItems.length === 0" >Cart is Empty</h2>
+        <app-cart-item *ngFor="let cartItem of cartItems" [item]="cartItem" (removeItem)="deleteItem($event)" (modifyAmount)="alertChange($event)"></app-cart-item>
     </div>
     <div class="payementDetails">
-        <app-total></app-total>
+        <app-total [total]="totalSum" ></app-total>
         <app-checkout-form></app-checkout-form>
     </div>
 </div>

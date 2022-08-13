@@ -10,7 +10,6 @@ import { ProductsListComponent } from './pages/products-list/products-list.compo
 import { CheckOutComponent } from './pages/check-out/check-out.component';
 import { SuccessComponent } from './pages/success/success.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
-import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { FormsModule } from '@angular/forms';
 import { CheckoutFormComponent } from './components/checkout-form/checkout-form.component';
@@ -26,7 +25,6 @@ import { TotalComponent } from './components/total/total.component';
     CheckOutComponent,
     SuccessComponent,
     ProductDetailsComponent,
-    CartComponent,
     CartItemComponent,
     CheckoutFormComponent,
     TotalComponent
