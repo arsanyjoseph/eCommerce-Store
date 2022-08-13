@@ -1,0 +1,23 @@
+.checkoutFormContainer {
+    width: 50%;
+    text-align: left;
+    border: 1px solid grey;
+    padding: 2em;
+    margin: 1em;
+    border-radius: 5px;
+}
+
+.checkoutForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.checkoutForm > label {
+    margin-top: 0.5em;
+}
+
+.checkoutBtn {
+    width: 50%;
+    margin-top: 2em;
+}

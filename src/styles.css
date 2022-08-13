@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.Btn {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 0.25em;
+    border-radius: 2px;
+}
+
+.Btn:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border: 2px solid black;
+}

@@ -1,0 +1,9 @@
+.submitBtn {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.success {
+    color: rgb(0, 119, 46);
+}

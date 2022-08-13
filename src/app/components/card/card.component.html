@@ -1,0 +1,11 @@
+<div class="cardContainer">
+    <div class="imageContainer">
+        <img src="{{item.url}}" alt="{{item.name}}" routerLink="/product/{{item.id}}" />
+    </div>
+    <h4>{{item.name}}</h4>
+    <p>${{item.price}}</p>
+    <form #form="ngForm" class="cardForm">
+        <input type="number" required min="0" placeholder="1" />
+        <button type="submit" class="Btn" [disabled]="form.invalid" >Add to Cart</button>
+    </form>
+</div>

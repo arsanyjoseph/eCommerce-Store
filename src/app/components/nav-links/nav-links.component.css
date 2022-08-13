@@ -1,0 +1,21 @@
+.navContainer {
+    margin-top: 1em;
+}
+
+.navContainer > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navContainer > ul > li {
+    margin: 0 0.5em;    
+}
+
+.clickable:hover {
+    color: rgb(66, 220, 255);
+    cursor: pointer;
+}

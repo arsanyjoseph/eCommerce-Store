@@ -1,0 +1,10 @@
+.headerContainer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.headerContainer > h1 {
+    margin: 0;
+}
