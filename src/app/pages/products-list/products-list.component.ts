@@ -11,14 +11,18 @@ import { Product } from '../../models/product.model';
 export class ProductsListComponent implements OnInit {
   products: Product[]= []
   cart:Product[]=[]
+  isAdded: boolean = false
   constructor(private productsService:ProductsService, private cartService:CartService ) { }
 
   ngOnInit(): void {
-    this.products = this.productsService.getProducts()
+    this.productsService.getItems().subscribe(res => {
+      this.products = res;
+    })
   }
 
   parentAddToCart(item:Product):void {
     this.cartService.addToCart(item)
+    this.isAdded = true
+    let timeOut = setTimeout(()=> this.isAdded = false, 3000)
   }
-
 }

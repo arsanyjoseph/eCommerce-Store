@@ -9,7 +9,7 @@ import { Product } from 'src/app/models/product.model';
 export class CardComponent implements OnInit {
  @Input() item:Product
  @Output() addToCart = new EventEmitter<Product>()
- amount:number = 0;
+ amount:string = '0';
  
   constructor() {
     this.item = {
@@ -18,18 +18,18 @@ export class CardComponent implements OnInit {
       description: '',
       url: '',
       price: 0,
-      amount: 1
+      amount: 0
     }
    }
 
   ngOnInit(): void {
   }
-  emitAddCart(item:Product, amount:string):void {
-    let amountMod = parseInt(amount)
+  emitAddCart(item:Product):void {
+    let amountMod = parseInt(this.amount)
     if(amountMod > 0) {
       let newItem = {
         ...item,
-        amount: parseInt(amount),
+        amount: parseInt(this.amount),
       }
       this.addToCart.emit(newItem)
     } 

@@ -1,3 +1,5 @@
 <div class="cardsContainer">
     <app-card *ngFor="let product of products" [item]="product" (addToCart)="parentAddToCart($event)"></app-card>
 </div>
+
+<h1 class="addMsg" *ngIf="isAdded" >Item Added</h1>
