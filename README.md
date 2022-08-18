@@ -1,6 +1,11 @@
 # MyStore
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
+MyStore is an eCommerce shop store with 3 initial views..
+A Products List View in which Product Cards are displayed with name, price, description and add to cart action..
+A Cart View with Total Price and Items in Cart and check out Form.
+A Success Purchase Page.
+Finally, A Product Details View
 
 ## Development server
 

@@ -5,7 +5,7 @@
     <h4>{{item.name}}</h4>
     <p>${{item.price}}</p>
     <form #form="ngForm" class="cardForm" (ngSubmit)="emitAddCart(item)">
-        <input type="number" required name="amount" placeholder="Amount" [(ngModel)]="amount" />
+        <input type="number" required name="amount" min="0" placeholder="Amount" [(ngModel)]="amount" (ngModelChange)="amount = $event" />
         <button type="submit" class="Btn" [disabled]="form.invalid" >Add to Cart</button>
     </form>
 </div>

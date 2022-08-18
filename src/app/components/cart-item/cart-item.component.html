@@ -7,7 +7,7 @@
         <p>{{item.price}}</p>
         <form class="cartForm">
             <label>Amount:</label>
-            <input type="number" placeholder="Amount" name="amount" [(ngModel)]="item.amount" (change)="changeAmount(item)"/>
+            <input type="number" placeholder="Amount" name="amount" min="0" [(ngModel)]="item.amount" (ngModelChange)="changeAmount(item)"/>
         </form>
         <button (click)="emitEvent(item)">remove</button>
     </div>

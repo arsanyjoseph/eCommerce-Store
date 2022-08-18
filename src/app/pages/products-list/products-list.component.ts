@@ -23,6 +23,6 @@ export class ProductsListComponent implements OnInit {
   parentAddToCart(item:Product):void {
     this.cartService.addToCart(item)
     this.isAdded = true
-    let timeOut = setTimeout(()=> this.isAdded = false, 3000)
+    setTimeout(()=> this.isAdded = false, 3000)
   }
 }

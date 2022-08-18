@@ -9,7 +9,12 @@ export class CartService {
   constructor() { }
 
   addToCart(item:Product): void {
+    let checkItem = this.cart.findIndex((i)=> i.id === item.id)
+    if(checkItem >= 0){
+      this.cart[checkItem].amount = item.amount
+  }else {
     this.cart.push(item)
+  }
   }
 
   getCart():Product[] {

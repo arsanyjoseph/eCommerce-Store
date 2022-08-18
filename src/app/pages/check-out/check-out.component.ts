@@ -10,6 +10,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class CheckOutComponent implements OnInit {
   cartItems: Product[] = [];
   totalSum:number = 0
+  isRemoved: boolean = false
   constructor(private cartService:CartService) { }
 
   ngOnInit(): void {
@@ -21,6 +22,8 @@ export class CheckOutComponent implements OnInit {
     this.cartService.removeItem(item)
     this.cartItems = this.cartService.getCart()
     this.totalSum = this.cartService.sumItems(this.cartItems)
+    this.isRemoved = true
+    setTimeout(()=> this.isRemoved = false, 3000)
   }
 
   alertChange(item:Product):void {
